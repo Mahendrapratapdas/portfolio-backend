@@ -1,6 +1,6 @@
 import express from "express";
 import cors from 'cors';
-import {ContactRoutes} from "../back-end/contractUS/route.js";
+import {ContactRoutes} from "./contractUS/route.js";
 
 const app = express();
 app.use(cors());

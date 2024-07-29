@@ -24,14 +24,75 @@ export default class ContactController{
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'Thank you for contacting us',
-            text: 'We have received your message and will get back to you shortly.',
+            html: `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f4f4f4;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .container {
+                        width: 80%;
+                        margin: 0 auto;
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+                    .header {
+                        text-align: center;
+                        background-color: #4CAF50;
+                        padding: 20px;
+                        border-radius: 10px 10px 0 0;
+                    }
+                    .header h1 {
+                        color: #fff;
+                        margin: 0;
+                    }
+                    .content {
+                        padding: 20px;
+                        text-align: center;
+                    }
+                    .content p {
+                        font-size: 16px;
+                        color: #333;
+                        line-height: 1.5;
+                    }
+                    .footer {
+                        text-align: center;
+                        padding: 20px;
+                        background-color: #4CAF50;
+                        border-radius: 0 0 10px 10px;
+                        color: #fff;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h1>Thank You for Your Message!</h1>
+                    </div>
+                    <div class="content">
+                        <p>We have received your message and will get back to you shortly.</p>
+                        <p>Thank you for reaching out to us. We appreciate your patience.</p>
+                    </div>
+                    <div class="footer">
+                        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+                    </div>
+                </div>
+            </body>
+            </html>`,
           };
     
           // Email to you with user's details
           const mailOptionsToSelf = {
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER,
-            subject: 'New contact form submission',
+            subject: 'New Message form Portfolio',
             text: `Email: ${email}\nMessage: ${message}`,
           };
     

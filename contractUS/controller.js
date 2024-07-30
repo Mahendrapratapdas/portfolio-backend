@@ -23,7 +23,7 @@ export default class ContactController{
           const mailOptionsToUser = {
             from: process.env.EMAIL_USER,
             to: email,
-            subject: 'Thank you for contacting us',
+            subject: 'Thank you for contacting me',
             html: `
             <!DOCTYPE html>
             <html>
@@ -81,7 +81,7 @@ export default class ContactController{
                         <p>Thank you for reaching out to us. We appreciate your patience.</p>
                     </div>
                     <div class="footer">
-                        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+                        <p>&copy; 2024 Mahendra Pratap Das. All rights reserved.</p>
                     </div>
                 </div>
             </body>
